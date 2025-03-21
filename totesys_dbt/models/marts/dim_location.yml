@@ -1,0 +1,25 @@
+models:
+  - name: dim_location
+
+    config:
+      contract: {enforced: true}
+    
+    columns:
+      - name: location_id
+        data_type: integer
+        constraints:
+          - type: primary_key
+      - name: address_line_1
+        data_type: varchar
+      - name: address_line_2
+        data_type: varchar
+      - name: district
+        data_type: varchar
+      - name: city
+        data_type: varchar
+      - name: postal_code
+        data_type: varchar
+      - name: country
+        data_type: varchar
+      - name: phone
+        data_type: varchar

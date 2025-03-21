@@ -1,0 +1,17 @@
+models:
+  - name: dim_design
+
+    config:
+      contract: {enforced: true}
+    
+    columns:
+      - name: design_id
+        data_type: integer
+        constraints:
+          - type: primary_key
+      - name: design_name
+        data_type: varchar
+      - name: file_location
+        data_type: varchar
+      - name: file_name
+        data_type: varchar

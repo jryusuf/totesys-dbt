@@ -1,0 +1,74 @@
+models:
+  - name: fact_sales_order
+
+    config:
+      contract: {enforced: true}
+    
+    columns:
+      # - name: sales_record_id
+      #   data_type: integer
+      #   constraints:
+      #     - type: primary_key
+      #     - type: auto
+      - name: sales_order_id
+        data_type: integer
+        constraints:
+          - type: primary_key
+      - name: created_at
+        data_type: date
+        constraints:
+          - type: foreign_key
+            to: ref('dim_date')
+            to_columns: [date_id]
+      - name: created_time
+        data_type: time
+      - name: last_updated
+        data_type: date
+        constraints:
+          - type: foreign_key
+            to: ref('dim_date')
+            to_columns: [date_id]        
+      - name: last_updated_time
+        data_type: time
+      - name: sales_staff_id
+        data_type: integer
+        constraints:
+          - type: foreign_key
+            to: ref('dim_staff')
+            to_columns: [staff_id]
+      - name: counterparty_id
+        data_type: integer
+        constraints:
+          - type: foreign_key
+            to: ref('dim_counterparty')
+            to_columns: [counterparty_id]
+      - name: units_sold
+        data_type: integer
+      - name: unit_price
+        data_type: decimal(10,2)
+      - name: currency_id
+        data_type: integer
+        constraints:
+          - type: foreign_key
+            to: ref('dim_currency')
+            to_columns: [currency_id]
+      - name: design_id
+        data_type: integer
+        constraints:
+          - type: foreign_key
+            to: ref('dim_design')
+            to_columns: [design_id]
+      - name: agreed_payment_date
+        data_type: date
+        constraints:
+          - type: foreign_key
+            to: ref('dim_date')
+            to_columns: [date_id]
+      - name: agreed_delivery_date
+        data_type: date
+        constraints:
+          - type: foreign_key
+            to: ref('dim_date')
+            to_columns: [date_id]
+      - name: agreed_delivery_location_id
+        data_type: integer

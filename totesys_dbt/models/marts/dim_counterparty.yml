@@ -1,0 +1,27 @@
+models:
+  - name: dim_counterparty
+
+    config:
+      contract: {enforced: true}
+    
+    columns:
+      - name: counterparty_id
+        data_type: int
+        constraints:
+          - type: primary_key
+      - name: counterparty_legal_name
+        data_type: varchar
+      - name: counterparty_legal_address_line_1
+        data_type: varchar
+      - name: counterparty_legal_address_line_2
+        data_type: varchar
+      - name: counterparty_legal_district
+        data_type: varchar
+      - name: counterparty_legal_city
+        data_type: varchar
+      - name: counterparty_legal_postal_code
+        data_type: varchar
+      - name: counterparty_legal_country
+        data_type: varchar
+      - name: counterparty_legal_phone_number
+        data_type: varchar

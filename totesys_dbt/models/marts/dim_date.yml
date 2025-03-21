@@ -1,0 +1,25 @@
+models:
+  - name: dim_date
+
+    config:
+      contract: {enforced: true}
+    
+    columns:
+      - name: date_id
+        data_type: date
+        constraints:
+          - type: primary_key
+      - name: year
+        data_type: int
+      - name: month
+        data_type: int
+      - name: month_name
+        data_type: varchar
+      - name: day_name
+        data_type: varchar
+      - name: day
+        data_type: int
+      - name: quarter
+        data_type: int
+      - name: day_of_week
+        data_type: int

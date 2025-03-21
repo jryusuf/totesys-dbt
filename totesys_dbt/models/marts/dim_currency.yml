@@ -1,0 +1,15 @@
+models:
+  - name: dim_currency
+
+    config:
+      contract: {enforced: true}
+    
+    columns:
+      - name: currency_id
+        data_type: integer
+        constraints:
+          - type: primary_key
+      - name: currency_code
+        data_type: varchar
+      - name: currency_name
+        data_type: varchar
