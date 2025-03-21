@@ -27,10 +27,9 @@ This project uses dbt (data build tool) to transform and model data in a **Postg
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd databricks-dbt/totesys_dbt # Navigate to the dbt project directory
+   git clone https://github.com/jryusuf/totesys-dbt
+   cd totesys_dbt/totesys_dbt # Navigate to the dbt project directory
    ```
-   Replace `<repository-url>` with the URL of your Git repository.
 
 2. **Install dbt packages**:
    This project uses dbt packages defined in `packages.yml` (including dbt_utils). Install them by running:
